@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Session Storage</title>
+</head>
+<body>
+Enter Name:<input type="text" id="nm"/><br>
+Email Id:<input type="text" id="ei"/><br>
+Mobile No:<input type="text" id="mn"/><br>
+<input type="button" value="write session" onclick="writeSessionData()"/>
+
+<script type="text/javascript">
+function writeSessionData()
+{
+var nm=document.getElementById("nm").value;
+var ei=document.getElementById("ei").value;
+var mn=document.getElementById("mn").value;
+
+if(typeof(Storage)!="undefined")
+{
+sessionStorage.empname=nm;
+sessionStorage.enmailid=ei;
+sessionStorage.mobileno=mn;
+alert("session data write successfully!!!");
+location.href="readsession.html";
+}
+else
+{
+alert("browser do not support storage!!!");
+}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Geo Location API</title>
+</head>
+<body>
+location:<span id="sp" value="loc"></span>
+<input type="button" value="getLocation" onclick="getLoc()"/>
+
+<script type="text/javascript">
+function getLoc()
+{
+if(navigator.geolocation!="undefined")
+{
+navigator.geolocation.getCurrentPosition(display);
+}
+else
+{
+alert("browser do not support!!!");
+}
+}
+
+function display(position)
+{
+var lat=position.coords.latitude;
+var long=position.coords.longitude;
+document.getElementById("sp").innerText=lat+" , "+long;
+}
+</script>
+</body>
+</html>

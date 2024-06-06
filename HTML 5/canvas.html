@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>canvas methods</title>
+</head>
+<body>
+<canvas id="cv" width="900" heigth="900">
+</canvas><br><br>
+<input type="button" value="draw" onclick="draw()"/>
+
+<script type="text/javascript">
+function draw()
+{
+var v= document.getElementById("cv");
+var c=v.getContext("2d");
+c.fillStyle="red";
+c.fillRect(0,0,200,100);
+c.stroke();
+c.moveTo(50,50);
+c.lineTo(200,200);
+c.stroke();
+c.beginpath();
+c.arc(95,50,40,0,2*Math.PI);
+c.stroke();
+c.font="30px arial";
+c.fillText("hello and welcome",400,400);
+c.stroke();
+}
+</script>
+</body>
+</html>

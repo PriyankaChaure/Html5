@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Session Storage</title>
+</head>
+<body>
+Enter Name:<span id="ename"></span><br>
+Email Id:<span id="eid"></span><br>
+Mobile No:<span id="emn"></span><br>
+<input type="button" value="read session" onclick="readSessionData()"/>
+
+<script type="text/javascript">
+function readSessionData()
+{
+document.getElementById("ename").innerText=sessionStorage.empname;
+document.getElementById("eid").innerText=sessionStorage.emailid;
+document.getElementById("emn").innerText=sessionStorage.mobileno;
+}
+
+</script>
+</body>
+</html>

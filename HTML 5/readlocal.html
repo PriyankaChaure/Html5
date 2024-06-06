@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>LocalStorage Read Data</title>
+</head>
+<body>
+EmpName=<span id="ename"></span><br>
+EmailId=<span id="email"></span><br>
+MobileNo=<span id="mobile"></span><br>
+<input type="button" value="read" onclick="readata()"/><br>
+<script type="text/javascript">
+function readata()
+{
+document.getElementById("ename").innerText=localStorage.EmpName;
+document.getElementById("email").innerText=localStorage.EmailId;
+document.getElementById("mobile").innerText=localStorage.MobileNo;
+}
+</script>
+</body>
+</html>

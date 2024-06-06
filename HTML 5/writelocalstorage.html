@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Local Storage</title>
+</head>
+<body>
+Enter Name:<input type="text" id="nm" /><br>
+Email Id:<input type="text" id="em"/><br>
+Mobile No:<input type="text" id="mb"/><br>
+<input type="button" value="Write" onclick="Writedata()"/>
+
+<script type="text/javascript">
+function Writedata()
+{
+var nm=document.getElementById("nm").value;
+var em=document.getElementById("em").value;
+var mb=document.getElementById("mb").value;
+if(typeof(Storage)!="undefined")
+{
+localStorage.EmpName=nm;
+localStorage.EmailId=em;
+localStorage.MobileNo=mb;
+alert("Write Successfully!");
+location.href="readlocal.html";
+}
+else
+{
+alert("Your browser do not suport storage!");
+}
+}
+
+</script>
+</body>
+</html>

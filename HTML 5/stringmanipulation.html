@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>string manipulation ex </title>
+</head>
+<body>
+<script type="text/javascript">
+var name=prompt("Enter Name");
+document.write(name.length+"<br>");
+
+
+for(var i=name.length;i>0;i--)
+{
+document.write(name.substring(0,i)+"<br>");
+}
+
+
+for(var i=0;i<=name.length;i++)
+{
+document.write(name.substring(i,0)+"<br>");
+}
+document.write("<br>");
+
+
+
+for(var i=name.length;i>0;i--)
+{
+document.write(name.substring(i,0)+"<br>");
+}
+document.write("<br>");
+
+
+
+for(var i=name.length;i>=0;i--)
+{
+document.write(name.substring(i,name.length)+"<br>");
+}
+document.write("<br>");
+
+
+for(var i=0;i<name.length;i++)
+{
+document.write(name.substring(i,name.length)+"<br>");
+}
+document.write("<br>");
+</script>
+</body>
+</html>
